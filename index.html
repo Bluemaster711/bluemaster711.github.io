@@ -1,127 +1,229 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="theme-color" content="#101513">
+  <meta name="description" content="Casey V. Donaldson's portfolio of software, security, and technical projects.">
+  <title>Casey V. Donaldson | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Styles/Styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <script src="JS/JavascriptThunder.js"></script>
-
-  <title>Casey's Website</title>
-
+  <script src="JS/JavascriptThunder.js" defer></script>
 </head>
 
 <body>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="Casey Donaldson home">CD<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#work">Selected work</a>
+      <a href="#about">About</a>
+      <a href="#learning">Learning</a>
+      <a href="#journal">Writing</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><span aria-hidden="true">◐</span></button>
+    </nav>
+  </header>
 
-  <div class="MainHeader">
-
-    <div class="row">
-      <h1>Casey's portfolio</h1>
-    </div>
-
-    <div class="row">
-
-      <div class="IntroText">
-        <h3>Casey V Donaldson</h3>
-        <button id="Flash" class="flash-button">FLASH</button>
-        <p> </p>
-        <p>Titles:</p>
-        <ul class="typed-text"></ul>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img src="Gallary/BackgroundImage.jpg" alt="" fetchpriority="high">
       </div>
-
-    </div>
-
-    <div class="Thunder">
-    </div>
-
-  </div>
-
-
-  <div class="fancy-divider"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h3>About me</h3>
-        <p>More information about me More information about me More information about me More information about me More
-          information about me
-          More information about me More information about me More information about me More information about me
-          More information about me More information about me More information about me More information about me
-          More information about me More information about me More information about me More information about me
-          More information about me More information about me More information about me More information about me
-        </p>
-
-        <a class="blog-button" href="">View blog posts</a>
-      </div>
-
-
-    </div>
-
-    <hr class="solid">
-
-    <div class="row">
-
-      <div class="col-sm-6">
-        <h2>Projects</h2>
-        <hr class="solid">
-
-        <div class="Project">
-          <h3>Mandelbrot GPGPU project</h3>
-          <p>Project description</p>
-          <a href="mandelbrotDemo.html" class="demo-button">View Demo of project</a>
-        </div>
-        <hr class="solid-semi">
-
-        <div class="Project">
-          <h3>AVL Tree Project</h3>
-          <p>Project description</p>
-        </div>
-        <hr class="solid-semi">
-        <div class="Project">
-          <h3>Websites - Bastile and Love-link</h3>
-          <p>Project description</p>
-        </div>
-        <hr class="solid-semi">
-        <div class="Project">
-          <h3>Metadata analyser tool</h3>
-          <p>Project description</p>
-        </div>
-        <hr class="solid-semi">
-        <div class="Project">
-          <h3>More</h3>
-          <p>Project description</p>
-        </div>
-        <hr class="solid-semi">
-
-
-
-
-      </div>
-
-      <div class="col-sm-6">
-        <h2>Education and certifications</h2>
-        <hr class="solid">
-        <p>More information about me More information about me More information about me More information about me More
-          information about me
-          More information about me More information about me More information about me More information about me
-          More information about me More information about me More information about me More information about me
-          More information about me More information about me More information about me More information about me
-          More information about me More information about me More information about me More information about me
-        </p>
-
-        <div class="Project">
-          <h3>University Reports</h3>
-          <hr class="solid-semi">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span> Casey V. Donaldson <span class="eyebrow-divider">/</span> Portfolio</p>
+        <h1 id="hero-title">Curiosity,<br>put to <span>work.</span></h1>
+        <p class="hero-intro">A collection of work across software, security, and the systems that connect them.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#about">A little about me <span aria-hidden="true">↓</span></a>
         </div>
       </div>
+      <div class="hero-caption"><span>01 / 04</span><span>Built through curiosity</span><span class="caption-line"></span></div>
+      <div class="hero-side-note" aria-hidden="true">PORTFOLIO — 2026</div>
+    </section>
 
-    </div>
+    <section class="intro-band" id="about" aria-labelledby="about-title">
+      <div class="section-label"><span>01</span> About</div>
+      <div class="intro-copy">
+        <h2 id="about-title">A practical mind for <em>complex problems.</em></h2>
+        <div class="intro-detail">
+          <p>I'm Casey. I work in software and enjoy exploring cybersecurity, solving practical problems, and building things that are useful. This portfolio is a collection of projects and things I've learned along the way.</p>
+          <div class="roles-block">
+            <span class="micro-label">A few parts of my story</span>
+            <ul class="role-list" aria-label="Roles and background">
+              <li>Software Engineer</li><li>Student</li><li>Cybersecurity Enthusiast</li><li>Store Customer Service Associate</li><li>Former Military</li><li>Hiker</li><li>Gamer</li><li>Problem Solver</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div>
+          <div class="section-label"><span>02</span> Selected work</div>
+          <h2 id="work-title">Completed projects<br>and experiments.</h2>
+        </div>
+        <p class="section-aside">The work I have completed and wanted to showcase.<br>Project write-ups will continue to grow as I continue to learn.</p>
+      </div>
+      <div class="filter-bar" role="group" aria-label="Filter projects">
+        <span class="micro-label">Filter by</span>
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>05</span></button>
+        <button class="filter-button" type="button" data-filter="software" aria-pressed="false">Software</button>
+        <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Security</button>
+        <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-featured" data-category="software">
+          <div class="project-visual fractal-visual" aria-hidden="true"><span class="visual-index">01</span><div class="fractal-ring"></div><span class="visual-caption">COMPUTE / VISUALISE</span></div>
+          <div class="project-info">
+            <div class="project-meta"><span>GPU COMPUTING</span><span>DEVELOPMENT</span></div>
+            <h3>Mandelbrot<br>GPGPU project</h3>
+            <p>A completed C++ project that generates the Mandelbrot set in parallel with C++ AMP, then displays it in an interactive SFML window. Pan, zoom, adjust iteration depth, and switch colour palettes as you explore.</p>
+            <a class="project-link" href="mandelbrotDemo.html">Explore the demo <span aria-hidden="true">↗</span></a>
+            <a class="project-link" href="https://github.com/Bluemaster711/DataStructuresAndAlgorithmsSemester2Assessment" target="_blank" rel="noopener noreferrer">View source code <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="project-card" data-category="software">
+          <div class="project-visual tree-visual" aria-hidden="true"><span class="visual-index">02</span><div class="tree-mark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-caption">STRUCTURE / BALANCE</span></div>
+          <div class="project-info">
+            <div class="project-meta"><span>DATA STRUCTURES</span><span>DEVELOPMENT</span></div>
+            <h3>AVL Tree</h3>
+            <p>A C++ AVL tree with insertion, search, deletion, in-order traversal, and maximum-value lookup. The report explores rotations, AVL-versus-BST complexity, and insertion timings across five input sizes.</p>
+            <p class="project-demo-placeholder">Project demo to be added</p>
+          </div>
+        </article>
+        <article class="project-card" data-category="web">
+          <div class="project-visual web-visual" aria-hidden="true"><span class="visual-index">03</span><div class="web-lines"><i></i><i></i><i></i><i></i></div><span class="visual-caption">DESIGN / BUILD</span></div>
+          <div class="project-info">
+            <div class="project-meta"><span>WEBSITE DEVELOPMENT</span><span>WEBSITE</span></div>
+            <h3>Bastile</h3>
+            <p>Second Year Website project. <span class="content-slot">During second year studies, I was assigned to work on a project which involved creating a responsive, accessible, secure and user-friendly website. The theme for this website had to be a band/singer so I decided to do a website around Bastile.</span></p>
+            <p class="project-demo-placeholder">Project demo to be added</p>
+          </div>
+        </article>
+        <article class="project-card" data-category="web">
+          <div class="project-visual web-visual lovelink-visual" aria-hidden="true"><span class="visual-index">04</span><div class="web-lines"><i></i><i></i><i></i><i></i></div><span class="visual-caption">DESIGN / BUILD</span></div>
+          <div class="project-info">
+            <div class="project-meta"><span>WEBSITE DEVELOPMENT</span><span>WEBSITE</span></div>
+            <h3>Love-link</h3>
+            <p>Third Year Website project. <span class="content-slot">This project was developed during my 3rd year of study. It involved designing and implementing a responsive website with a focus on user experience and accessibility, with some of the highlighted features being ondemand chatting, matching with couples and secure SQL functions. (Yes it was a dating app) The project was done with a group of 5 members.</span></p>
+            <p class="project-demo-placeholder">Project demo to be added</p>
+          </div>
+        </article>
+        <article class="project-card" data-category="security">
+          <div class="project-visual metadata-visual" aria-hidden="true"><span class="visual-index">05</span><div class="scan-mark"><i></i><i></i><i></i><i></i></div><span class="visual-caption">INSPECT / UNDERSTAND</span></div>
+          <div class="project-info">
+            <div class="project-meta"><span>SECURITY TOOLING</span><span>SCRIPTING</span></div>
+            <h3>Metadata analyser</h3>
+            <p>A tool concept for examining metadata. <span class="content-slot">The tool allowed for quick GPS location identification which included a generated map, the tool also gave the ability to extract and analyze various metadata fields but also wipe said data securely.</span></p>
+            <p class="project-demo-placeholder">Project demo to be added</p>
+          </div>
+        </article>
+      </div>
+      <p class="filter-empty" hidden>No projects in this category yet.</p>
+    </section>
 
+    <section class="learning-section" id="learning" aria-labelledby="learning-title">
+      <div class="section-label"><span>03</span> Learning</div>
+      <div class="learning-content">
+        <div>
+          <h2 id="learning-title">Grounded in learning.<br><em>Growing by doing.</em></h2>
+          <p class="learning-intro">A First-Class BSc (Hons) in Ethical Hacking from Abertay University, complemented by the ISC2 Certified in Cybersecurity credential and project-based coursework.</p>
+        </div>
+        <div class="learning-list">
+          <details class="learning-item">
+            <summary><span class="learning-number">01</span><span><strong>Abertay University</strong><small>BSc (Hons) Ethical Hacking • First Class • 2022–2025</small></span><span class="disclosure-icon" aria-hidden="true">+</span></summary>
+            <div class="education-detail">
+              <p>Graduated with a First-Class BSc (Hons) in Ethical Hacking. Abertay describes the programme as a practical cybersecurity degree, combining technical security knowledge with hands-on assessment.</p>
+              <div class="education-focus">
+                <span class="micro-label">Course focus</span>
+                <ul>
+                  <li>Understanding attack methods and developing countermeasures</li>
+                  <li>Security audit testing across networks and systems</li>
+                  <li>Applying security concepts through practical projects</li>
+                  <li>Communicating findings through reports and assessment work</li>
+                </ul>
+              </div>
+              <a class="education-link" href="https://www.abertay.ac.uk/course-search/undergraduate/ethical-hacking/" target="_blank" rel="noopener noreferrer">Abertay course information <span aria-hidden="true">↗</span></a>
+            </div>
+          </details>
+          <details class="learning-item">
+            <summary><span class="learning-number">02</span><span><strong>ISC2 Certified in Cybersecurity (CC)</strong><small>ISC2 • Certified</small></span><span class="disclosure-icon" aria-hidden="true">+</span></summary>
+            <div class="certification-detail">
+              <p>The ISC2 Certified in Cybersecurity (CC) is an entry-level certification that validates foundational cybersecurity knowledge. It is designed for people beginning or building toward cybersecurity work and does not require prior professional experience.</p>
+              <div class="certification-skills">
+                <span class="micro-label">Knowledge areas</span>
+                <ul>
+                  <li>Security principles and governance</li>
+                  <li>Identity and access management (IAM)</li>
+                  <li>Networking and cloud security concepts</li>
+                  <li>Security operations and incident response</li>
+                </ul>
+              </div>
+              <p class="certification-benefit"><strong>What it demonstrates:</strong> a verified foundation in core security concepts and commitment to continued learning. It supports an entry-level pathway, alongside practical experience and further development.</p>
+              <a class="certification-link" href="https://www.isc2.org/certifications/cc" target="_blank" rel="noopener noreferrer">ISC2 certification details <span aria-hidden="true">↗</span></a>
+            </div>
+          </details>
+          <details class="learning-item">
+            <summary><span class="learning-number">03</span><span><strong>University reports</strong><small>13 reports and project documents</small></span><span class="disclosure-icon" aria-hidden="true">+</span></summary>
+            <div class="report-list">
+              <div class="report-group">
+                <h4>Dissertation &amp; honours work</h4>
+                <ul>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Casey-Dissertation.pdf" target="_blank" rel="noopener noreferrer">Casey-Dissertation.pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Dissertation_Proposal_Casey_2203162.pdf" target="_blank" rel="noopener noreferrer">Dissertation_Proposal_Casey_2203162.pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Honours%20Project%20Feasibility%20Demonstration%20-%20Casey%20%282203162%29.pdf" target="_blank" rel="noopener noreferrer">Honours Project Feasibility Demonstration - Casey (2203162).pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/CaseyDonaldson-2203162-Poster.ppt" target="_blank" rel="noopener noreferrer">CaseyDonaldson-2203162-Poster.ppt</a></li>
+                </ul>
+              </div>
+              <div class="report-group">
+                <h4>Forensics &amp; security</h4>
+                <ul>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Advanced%20Digital%20Forensics%20Unit%201%20-%20Casey.pdf" target="_blank" rel="noopener noreferrer">Advanced Digital Forensics Unit 1 - Casey.pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Advanced%20Digital%20Forensics%20Unit%202%20-%20Casey%20%282203162%29.pdf" target="_blank" rel="noopener noreferrer">Advanced Digital Forensics Unit 2 - Casey (2203162).pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/CMP210%20-%20Report%20-%20Pen%20testing%20Assesment.pdf" target="_blank" rel="noopener noreferrer">CMP210 - Report - Pen testing Assesment.pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Digital%20Forensics%20Report%20-%202nd%20year.pdf" target="_blank" rel="noopener noreferrer">Digital Forensics Report - 2nd year.pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/MalwareAnalysisOnWannaCry.pdf" target="_blank" rel="noopener noreferrer">MalwareAnalysisOnWannaCry.pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Web%20Application%20Assesment%20-%203rd%20year.pdf" target="_blank" rel="noopener noreferrer">Web Application Assesment - 3rd year.pdf</a></li>
+                </ul>
+              </div>
+              <div class="report-group">
+                <h4>Software &amp; infrastructure</h4>
+                <ul>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Report%20on%20AVL%20Tree%20implementation%20-%202nd%20year.pdf" target="_blank" rel="noopener noreferrer">Report on AVL Tree implementation - 2nd year.pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Report%20on%20Network%20-%203rd%20year.pdf" target="_blank" rel="noopener noreferrer">Report on Network - 3rd year.pdf</a></li>
+                  <li><a href="https://github.com/Bluemaster711/University-Reports/blob/main/Report%20on%20Scripting%20project%20-%203rd%20year.pdf" target="_blank" rel="noopener noreferrer">Report on Scripting project - 3rd year.pdf</a></li>
+                </ul>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="journal-section" id="journal" aria-labelledby="journal-title">
+      <div class="section-label"><span>04</span> Notes &amp; writing</div>
+      <div class="journal-row">
+        <div><h2 id="journal-title">Room for the<br>thinking behind it.</h2><p>Short notes, project write-ups, and lessons learned will live here.</p></div>
+        <div class="journal-placeholder"><span class="journal-symbol" aria-hidden="true">✳</span><div><span class="micro-label">FIRST ENTRY</span><strong>To be completed</strong><p>A place for practical notes and ideas from ongoing work which I have encountered.</p></div><span class="journal-arrow" aria-hidden="true">↗</span></div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <a class="wordmark" href="#top" aria-label="Back to top">CD<span>.</span></a>
+      <p>Casey V. Donaldson <span>—</span> Portfolio</p>
+      <a href="#top" class="back-to-top">Back to top <span aria-hidden="true">↑</span></a>
+      <small>Feel free to reach out if you have any questions or would like to collaborate, you can do this via my LinkedIn profile.</small>
+    </footer>
+  </main>
 </body>
 
 </html>

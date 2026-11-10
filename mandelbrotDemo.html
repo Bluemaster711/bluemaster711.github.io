@@ -4,38 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="theme-color" content="#101513">
+    <meta name="description" content="A video demonstration of Casey Donaldson's Mandelbrot GPGPU project.">
+    <title>Mandelbrot GPGPU Project | Casey V. Donaldson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles/MandelbrotStyles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Mandelbrot Demo</title>
+    <script src="JS/JavascriptThunder.js" defer></script>
 </head>
 
 <body>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
+    <header class="demo-header">
+        <a class="wordmark" href="index.html" aria-label="Casey Donaldson portfolio">CD<span>.</span></a>
+        <a class="back-link" href="index.html#work"><span aria-hidden="true">←</span> All projects</a>
+    </header>
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-sm-12">
-                <h1>Demo of the madelbrot</h1>
-                <p>Explain demo</p>
-                <p>Play the video to see the demostration</p>
+    <main>
+        <section class="demo-intro" aria-labelledby="demo-title">
+            <div class="demo-kicker"><span>PROJECT 01</span><span class="kicker-rule"></span><span>GPU COMPUTING</span></div>
+            <h1 id="demo-title">Mandelbrot<br><em>GPGPU project</em></h1>
+            <div class="demo-summary">
+                <p>A completed university project: an interactive Mandelbrot explorer written in C++. C++ AMP calculates the image across GPU threads, while SFML presents the result and handles the desktop window.</p>
+                <div class="demo-facts">
+                    <div><span class="micro-label">STACK</span><strong>C++ / C++ AMP / SFML</strong></div>
+                    <div><span class="micro-label">INTERACTION</span><strong>Pan, zoom &amp; recolour</strong></div>
+                </div>
             </div>
+        </section>
 
+        <section class="video-section" aria-label="Project video">
+            <div class="video-heading"><span class="micro-label">01 / PROJECT WALKTHROUGH</span><span class="micro-label">USE CONTROLS TO PLAY</span></div>
+            <div class="video-frame">
+                <video id="demo-video" controls preload="metadata" playsinline aria-label="Mandelbrot GPGPU project demonstration">
+                    <source src="Gallary/mandelbrot.mp4" type="video/mp4">
+                    Your browser cannot play this video. <a href="Gallary/mandelbrot.mp4">Open the video file</a> instead.
+                </video>
+            </div>
+            <div class="video-toolbar" aria-label="Additional video controls">
+                <button class="video-button" type="button" data-video-play aria-label="Play video"><span>Play</span><b aria-hidden="true">▶</b></button>
+                <label class="speed-control"><span>Playback speed</span><select data-video-speed aria-label="Playback speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+                <button class="video-button fullscreen-button" type="button" data-video-fullscreen aria-label="View video fullscreen"><span>Fullscreen</span><b aria-hidden="true">⛶</b></button>
+            </div>
+        </section>
 
-        </div>
+        <section class="project-notes" aria-labelledby="notes-title">
+            <div class="section-label"><span>02</span> Project notes</div>
+            <div class="notes-layout">
+                        <div><h2 id="notes-title">The work behind<br>the image.</h2><p class="notes-intro">A GPU-parallel rendering exercise turned into an interactive way to explore the complex plane.</p><a class="source-link" href="https://github.com/Bluemaster711/DataStructuresAndAlgorithmsSemester2Assessment" target="_blank" rel="noopener noreferrer">View source on GitHub <span aria-hidden="true">↗</span></a></div>
+                <div class="notes-list">
+                    <details open>
+                        <summary><span>Project overview</span><span class="notes-plus" aria-hidden="true">+</span></summary>
+                                <p>Each pixel maps to a point on the complex plane. The program repeatedly applies z = z<sup>2</sup> + c and uses the number of iterations before escape to colour the image.</p>
+                    </details>
+                    <details>
+                                <summary><span>Explore the set</span><span class="notes-plus" aria-hidden="true">+</span></summary>
+                                <ul class="control-list">
+                                    <li><span class="key-group"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><span>Pan around the complex plane</span></li>
+                                    <li><span class="key-group"><kbd>+</kbd> / <kbd>-</kbd></span><span>Zoom in and out</span></li>
+                                    <li><span class="key-group"><kbd>Z</kbd> / <kbd>X</kbd></span><span>Increase or decrease iteration depth</span></li>
+                                    <li><span class="key-group"><kbd>1</kbd> – <kbd>3</kbd></span><span>Choose a colour palette</span></li>
+                                    <li><span class="key-group"><kbd>R</kbd></span><span>Reset the view</span></li>
+                                </ul>
+                    </details>
+                    <details>
+                                <summary><span>GPU implementation</span><span class="notes-plus" aria-hidden="true">+</span></summary>
+                                <p>The rendering kernel uses C++ AMP tiled parallel execution with 8 × 8 tiles. Each GPU thread computes a pixel independently; SFML displays the generated image, and the program reports render time.</p>
+                                <p class="demo-caveat">Please note that older dependencies within this application, may affect running the project on current systems.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
 
-        <hr class="solid">
-
-        <video controls autoplay>
-            <source src="Gallary/mandelbrot.mp4" type="video/mp4">
-        </video>
-
-        <div class="row">
-            <a class="homepage-button" href="index.html">Return</a>
-        </div>
-
+        <footer class="demo-footer">
+            <a class="wordmark" href="index.html" aria-label="Return to portfolio">CD<span>.</span></a>
+            <span>Casey V. Donaldson / Selected work</span>
+            <a href="index.html#work">Back to projects <span aria-hidden="true">↗</span></a>
+        </footer>
+    </main>
 </body>
 
 </html>
